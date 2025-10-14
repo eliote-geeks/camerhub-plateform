@@ -113,9 +113,12 @@ class ContactController extends Controller
             ], 502);
         }
 
+        $payload = $response->json();
+
         return response()->json([
-            'reply' => data_get($response->json(), 'reply'),
-            'context' => data_get($response->json(), 'context'),
+            'reply' => data_get($payload, 'reply') ?? data_get($payload, 'response'),
+            'response' => data_get($payload, 'response'),
+            'context' => data_get($payload, 'context'),
         ]);
     }
 }

@@ -1,5 +1,17 @@
-RewriteEngine On
-RewriteBase /
-RewriteCond %{THE_REQUEST} /public/([^\s]*) [NC]
-RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^((!public/).*)$ public/$1 [L,NC]
+<IfModule mod_rewrite.c>
+    Options -MultiViews -Indexes
+
+    RewriteEngine On
+
+    RewriteCond %{THE_REQUEST} \s/+public/([^\s]*) [NC]
+    RewriteRule ^ %1 [L,R=302,NE]
+
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    DirectoryIndex public/index.php
+</IfModule>

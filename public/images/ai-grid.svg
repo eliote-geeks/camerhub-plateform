@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" role="img" aria-labelledby="title desc">
+  <title>Réseau IA Camerhub</title>
+  <desc>Grille néon représentant un réseau synthétique</desc>
+  <defs>
+    <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.7" />
+      <stop offset="60%" stop-color="#4361ee" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#f72585" stop-opacity="0.4" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3f37c9" stop-opacity="0.55" />
+      <stop offset="75%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glowBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+  </defs>
+
+  <rect width="640" height="540" rx="32" fill="#030712" />
+  <rect width="640" height="540" fill="url(#glowGradient)" />
+  <g stroke="url(#gridGradient)" stroke-width="1.2" opacity="0.65">
+    <path d="M40 140 L600 60" />
+    <path d="M40 220 L600 140" />
+    <path d="M40 300 L600 220" />
+    <path d="M40 380 L600 300" />
+    <path d="M40 460 L600 380" />
+    <path d="M100 40 L180 500" />
+    <path d="M200 40 L260 500" />
+    <path d="M300 40 L340 500" />
+    <path d="M400 40 L420 500" />
+    <path d="M500 40 L500 500" />
+  </g>
+
+  <g fill="none" stroke="#4cc9f0" stroke-width="1.6" stroke-linecap="round" filter="url(#glowBlur)">
+    <path d="M120 210 C220 120 320 180 420 140 520 100 560 160 540 220" />
+    <path d="M150 350 C240 330 300 260 410 280 520 300 520 360 460 400" />
+  </g>
+
+  <g fill="#4cc9f0">
+    <circle cx="460" cy="210" r="6" fill="#4cc9f0" />
+    <circle cx="540" cy="220" r="4" fill="#f72585" />
+    <circle cx="380" cy="320" r="5" fill="#4cc9f0" />
+    <circle cx="210" cy="260" r="4" fill="#f1f5ff" />
+    <circle cx="280" cy="160" r="3" fill="#4cc9f0" />
+  </g>
+</svg>

@@ -1,0 +1,242 @@
+[
+  {
+    "slug": "assistants-whatsapp-multi-marques",
+    "title": "Assistants WhatsApp multi-marques",
+    "industry": "Retail / e-commerce",
+    "metric": "95% de réponses automatisées",
+    "description": "Détection d’intentions, relances automatiques et routage vers les bons conseillers pour réduire le temps de réponse à moins de 3 minutes.",
+    "stack": ["WhatsApp Cloud", "n8n", "OpenAI", "HubSpot"],
+    "challenge": "Plusieurs marques partageaient la même équipe support, engorgeant WhatsApp et faisant exploser les délais de réponse.",
+    "solution": [
+      "Orchestration n8n des flux entrants avec reconnaissance d’intentions et classification marque",
+      "Agent IA qui propose des réponses contextualisées et prépare les relances automatiques",
+      "Escalade prioritaire vers le bon conseiller avec résumé des échanges"
+    ],
+    "results": [
+      "-3 minutes de temps de réponse moyen",
+      "95% des conversations résolues sans intervention humaine",
+      "Satisfaction client +18 points"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage multimarques + design conversationnel",
+      "Semaine 2 : build n8n, prompts et monitoring",
+      "Semaine 3 : tests réels et formation équipe"
+    ]
+  },
+  {
+    "slug": "nurturing-ventes-scoring",
+    "title": "Nurturing ventes & scoring leads",
+    "industry": "SaaS B2B",
+    "metric": "x3 sur le taux de conversion",
+    "description": "Segmentation dynamique, scoring IA et relances multicanales orchestrées dans n8n.",
+    "stack": ["n8n", "Zoho CRM", "Langfuse"],
+    "challenge": "Les commerciaux perdaient du temps sur des leads froids faute de scoring fiable et d’informations consolidées.",
+    "solution": [
+      "Collecte automatique des signaux d’usage produit et interactions marketing",
+      "Scoring IA combinant firmographie + signaux comportementaux",
+      "Playbooks de nurturing multicanal déclenchés selon le score"
+    ],
+    "results": [
+      "+210% d’opportunités qualifiées",
+      "3 heures économisées par commercial chaque semaine",
+      "Visibilité temps réel sur la météo pipeline"
+    ],
+    "timeline": [
+      "Semaine 1 : audit CRM et mapping signaux",
+      "Semaine 2 : construction scoring + dashboards",
+      "Semaine 3 : automatisations nurturing + handover"
+    ]
+  },
+  {
+    "slug": "copilote-interne-operations",
+    "title": "Copilote interne opérations",
+    "industry": "Opérations logistiques",
+    "metric": "-40% de charge opérationnelle",
+    "description": "Synthèse quotidienne, génération de rapports et recommandations d’actions prioritaires basées sur vos KPIs.",
+    "stack": ["Notion", "Supabase", "OpenAI", "Metabase"],
+    "challenge": "Les managers passaient leurs matinées à consolider les incidents et KPI dispersés dans plusieurs outils.",
+    "solution": [
+      "Centralisation des événements opérationnels dans Supabase",
+      "Copilote IA qui synthétise incidents, écarts et actions recommandées",
+      "Automatisation des revues quotidiennes et alerting Slack"
+    ],
+    "results": [
+      "40% de temps gagné côté managers",
+      "Incident review réduite à 15 minutes",
+      "Documentation continue dans Notion"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage KPI + modélisation data",
+      "Semaine 2 : build copilote IA + dashboards",
+      "Semaine 3 : déploiement pilotes + formation"
+    ]
+  },
+  {
+    "slug": "support-multilingue-247",
+    "title": "Support multilingue 24/7",
+    "industry": "EdTech",
+    "metric": "-65% de backlog support",
+    "description": "Chatbot web + email qui traite 4 langues, escalade aux bons experts et génère des synthèses SLA automatiques.",
+    "stack": ["Next.js", "n8n", "Anthropic", "Zendesk"],
+    "challenge": "L’équipe support recevait des dizaines de questions récurrentes en plusieurs langues, hors horaires, avec un backlog croissant.",
+    "solution": [
+      "Chatbot web intégré à la documentation dynamique",
+      "Routing automatique selon langue et niveau de criticité",
+      "Synthèse automatique des tickets escaladés dans Zendesk"
+    ],
+    "results": [
+      "65% de tickets résolus sans agent",
+      "Couverture 24/7 sans staffing additionnel",
+      "Temps moyen de résolution divisé par 2"
+    ],
+    "timeline": [
+      "Semaine 1 : collecte intents + design multilingue",
+      "Semaine 2 : implémentation bot + intégrations",
+      "Semaine 3 : QA, monitoring et rollout"
+    ]
+  },
+  {
+    "slug": "reporting-financier-automatise",
+    "title": "Reporting financier automatisé",
+    "industry": "Finance / PME",
+    "metric": "2h gagnées / jour",
+    "description": "Automatisation de la collecte comptable, génération de dashboards KPIs et alerting en cas d’écarts critiques.",
+    "stack": ["Airtable", "Temporal", "DuckDB", "Metabase"],
+    "challenge": "Le DAF passait trop de temps à consolider les écritures et vérifier les écarts avant chaque comité.",
+    "solution": [
+      "Pipelines automatisés pour nettoyer et agréger les écritures",
+      "Dashboards financiers temps réel et alertes Slack",
+      "Documentation automatique des écarts et tâches à relancer"
+    ],
+    "results": [
+      "Jusqu’à 2 heures gagnées par jour",
+      "Visibilité instantanée sur trésorerie et marge",
+      "Clôtures mensuelles accélérées"
+    ],
+    "timeline": [
+      "Semaine 1 : audit flux comptables + stack",
+      "Semaine 2 : pipelines data + dashboards",
+      "Semaine 3 : industrialisation Temporal + monitoring"
+    ]
+  },
+  {
+    "slug": "onboarding-rh-intelligent",
+    "title": "Onboarding RH intelligent",
+    "industry": "Scale-up",
+    "metric": "92% de satisfaction onboarding",
+    "description": "Agent IA qui guide les nouvelles recrues, découpe les tâches et notifie les managers en cas de blocage.",
+    "stack": ["Slack", "n8n", "OpenAI", "Notion"],
+    "challenge": "Les nouveaux arrivants avaient une expérience fragmentée avec des checklists dispersées et peu de feedback managers.",
+    "solution": [
+      "Assistant Slack qui orchestre le parcours onboarding",
+      "Checklist dynamique et ressources personnalisées",
+      "Relance automatique des managers avec synthèse avancée"
+    ],
+    "results": [
+      "92% de satisfaction onboarding",
+      "Temps d’activation des recrues réduit de 35%",
+      "Managers alertés en cas de blocage"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage parcours et tonalité assistant",
+      "Semaine 2 : implémentation workflows + contenu",
+      "Semaine 3 : pilote interne et itérations"
+    ]
+  },
+  {
+    "slug": "pilotage-campagnes-growth",
+    "title": "Pilotage campagnes growth IA",
+    "industry": "Marketing digital",
+    "metric": "+48% de ROI campagnes",
+    "description": "Copilote marketing qui priorise les audiences, ajuste les budgets et génère des variantes créatives.",
+    "stack": ["Google Ads", "Meta", "n8n", "OpenAI", "Looker Studio"],
+    "challenge": "L’équipe growth jonglait avec plusieurs plateformes et perdait du temps à analyser les performances quotidiennement.",
+    "solution": [
+      "Collecte consolidée des spend/perf sur toutes les plateformes",
+      "Modèle IA qui recommande la réallocation budgétaire",
+      "Génération automatique de variantes d’annonces et diffusion en un clic"
+    ],
+    "results": [
+      "+48% de ROI moyen sur 8 semaines",
+      "Reporting quotidien automatisé",
+      "2 heures économisées par jour pour l’équipe"
+    ],
+    "timeline": [
+      "Semaine 1 : audit campagnes + définition KPI",
+      "Semaine 2 : automatisations collecte + recommandations",
+      "Semaine 3 : génération créative IA et tests A/B"
+    ]
+  },
+  {
+    "slug": "maintenance-terrain-augmente",
+    "title": "Maintenance terrain augmentée",
+    "industry": "Industrie",
+    "metric": "-30% de temps d’arrêt",
+    "description": "Assistant mobile pour techniciens qui diagnostique, propose les pièces et sauvegarde les interventions.",
+    "stack": ["Flutter", "n8n", "Supabase", "OpenAI", "PowerBI"],
+    "challenge": "Les interventions terrain manquaient de standardisation et la remontée d’information était lente.",
+    "solution": [
+      "Checklist dynamique générée selon l’équipement",
+      "Reconnaissance photo pour identifier pièces et incidents",
+      "Synchronisation automatique des rapports et stock pièce de rechange"
+    ],
+    "results": [
+      "30% de temps d’arrêt en moins",
+      "Rapports disponibles en temps réel",
+      "Réduction des erreurs de diagnostic"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage équipements critiques",
+      "Semaine 2 : conception assistant + intégrations",
+      "Semaine 3 : pilotes terrain et amélioration continue"
+    ]
+  },
+  {
+    "slug": "conformite-documents-automatique",
+    "title": "Conformité documents automatique",
+    "industry": "Legal / Assurance",
+    "metric": "+75% de dossiers traités",
+    "description": "IA qui contrôle les pièces, détecte les anomalies et prépare les rapports de conformité.",
+    "stack": ["Langchain", "n8n", "Azure Form Recognizer", "Notion"],
+    "challenge": "La revue manuelle des dossiers rallongeait les délais et laissait passer des incohérences.",
+    "solution": [
+      "Extraction automatique des champs critiques",
+      "Règles de conformité IA + vérifications manuelles ciblées",
+      "Génération de rapports horodatés et traçables"
+    ],
+    "results": [
+      "+75% de dossiers traités par semaine",
+      "Temps moyen de vérification divisé par 3",
+      "Audit trail complet pour les régulateurs"
+    ],
+    "timeline": [
+      "Semaine 1 : collecte corpus et définition règles",
+      "Semaine 2 : extraction formulaires + détection anomalies",
+      "Semaine 3 : industrialisation n8n + dashboards conformité"
+    ]
+  },
+  {
+    "slug": "knowledge-base-generative",
+    "title": "Knowledge base générative interne",
+    "industry": "Services professionnels",
+    "metric": "90% de réponses instantanées",
+    "description": "Assistant interne qui répond aux consultants, référence les documents et escalade vers les experts.",
+    "stack": ["ElasticSearch", "n8n", "OpenAI", "Notion", "Slack"],
+    "challenge": "Les équipes passaient trop de temps à retrouver les bonnes slides ou procédures.",
+    "solution": [
+      "Indexation automatique des documents et mises à jour",
+      "Assistant Slack + web qui synthétise et cite les sources",
+      "Escalade vers expert en cas d’incertitude avec résumé"
+    ],
+    "results": [
+      "90% des questions résolues instantanément",
+      "Réduction de 50% des demandes vers l’équipe support interne",
+      "Capitalisation renforcée grâce à la documentation centralisée"
+    ],
+    "timeline": [
+      "Semaine 1 : audit knowledge base et droits d’accès",
+      "Semaine 2 : pipeline d’indexation + assistant",
+      "Semaine 3 : déploiement équipe pilote et formation"
+    ]
+  }
+]

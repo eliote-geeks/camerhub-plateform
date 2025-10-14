@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" role="img" aria-labelledby="title desc">
+  <title>Hologramme support Camerhub</title>
+  <desc>Hologramme représentant un copilote IA d’assistance</desc>
+  <defs>
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#4361ee" stop-opacity="0.6" />
+    </linearGradient>
+    <radialGradient id="beamGradient" cx="50%" cy="10%" r="80%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="420" rx="28" fill="#030712" />
+  <ellipse cx="240" cy="360" rx="160" ry="40" fill="url(#beamGradient)" />
+
+  <g fill="none" stroke="#4cc9f0" stroke-opacity="0.7" stroke-width="1.8">
+    <path d="M160 320 Q240 260 320 320" />
+    <path d="M180 290 Q240 240 300 290" />
+  </g>
+
+  <g transform="translate(120 80)">
+    <rect x="20" y="0" width="220" height="140" rx="28" fill="#0f172a" stroke="#3f37c9" stroke-width="2" />
+    <rect x="50" y="30" width="160" height="40" rx="20" fill="url(#panelGradient)" />
+    <circle cx="90" cy="50" r="12" fill="#f8f9ff" />
+    <circle cx="140" cy="50" r="12" fill="#f8f9ff" />
+    <path d="M80 80 C110 110 150 110 180 80" stroke="#f8f9ff" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <g fill="#4cc9f0" opacity="0.5">
+    <circle cx="120" cy="140" r="6" />
+    <circle cx="360" cy="180" r="5" />
+    <circle cx="260" cy="90" r="4" />
+  </g>
+
+  <rect x="180" y="180" width="120" height="32" rx="16" fill="#4cc9f0" fill-opacity="0.18" stroke="#4cc9f0" stroke-opacity="0.4" />
+</svg>

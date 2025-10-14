@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+    <defs>
+        <radialGradient id="orbGradient" cx="50%" cy="45%" r="65%">
+            <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.95" />
+            <stop offset="55%" stop-color="#4361ee" stop-opacity="0.7" />
+            <stop offset="100%" stop-color="#1b1b3a" stop-opacity="0.05" />
+        </radialGradient>
+        <linearGradient id="visorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f8f9ff" stop-opacity="0.92" />
+            <stop offset="100%" stop-color="#90e0ef" stop-opacity="0.55" />
+        </linearGradient>
+        <filter id="glowBlur" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="24" result="blur" />
+        </filter>
+    </defs>
+
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="210" cy="210" r="170" fill="url(#orbGradient)" />
+        <circle cx="210" cy="210" r="190" fill="#3f37c9" fill-opacity="0.18" filter="url(#glowBlur)" />
+
+        <g transform="translate(110 92)">
+            <rect x="32" width="136" height="28" rx="14" fill="#4895ef" fill-opacity="0.28" />
+            <rect x="16" y="20" width="168" height="128" rx="64" fill="#020617" fill-opacity="0.7" stroke="#90e0ef" stroke-width="2.5" />
+            <rect x="36" y="38" width="128" height="92" rx="46" fill="url(#visorGradient)" />
+
+            <g transform="translate(48 58)" fill="#030712">
+                <circle cx="30" cy="24" r="14" fill="#030713" stroke="#70d6ff" stroke-width="2.5" />
+                <circle cx="82" cy="24" r="14" fill="#030713" stroke="#70d6ff" stroke-width="2.5" />
+                <circle cx="30" cy="24" r="6" fill="#caf0f8" />
+                <circle cx="82" cy="24" r="6" fill="#caf0f8" />
+            </g>
+
+            <path d="M42 114c7 24 28 40 58 40s51-16 58-40" stroke="#4cc9f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+
+        <g transform="translate(64 236)">
+            <path d="M0 50c44-34 98-52 154-52s110 18 154 52" stroke="#4895ef" stroke-width="14" stroke-linecap="round" stroke-opacity="0.35" />
+            <path d="M46 86c36-22 82-34 126-34s90 12 126 34" stroke="#4cc9f0" stroke-width="12" stroke-linecap="round" stroke-opacity="0.28" />
+            <path d="M82 118c26-12 56-18 90-18s62 6 90 18" stroke="#caf0f8" stroke-width="8" stroke-linecap="round" stroke-opacity="0.22" />
+        </g>
+    </g>
+</svg>

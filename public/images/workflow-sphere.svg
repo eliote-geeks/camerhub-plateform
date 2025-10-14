@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title>Sphère d’automatisation Camerhub</title>
+  <desc>Sphère lumineuse représentant un flux d’automatisation</desc>
+  <defs>
+    <radialGradient id="sphereGradient" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#4361ee" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f72585" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4cc9f0" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="520" height="520" rx="36" fill="#030712" />
+  <circle cx="260" cy="260" r="210" fill="url(#sphereGradient)" />
+
+  <g fill="none" stroke="url(#ringGradient)" stroke-width="2">
+    <ellipse cx="260" cy="280" rx="190" ry="60" opacity="0.6" />
+    <ellipse cx="260" cy="255" rx="160" ry="48" opacity="0.45" />
+    <ellipse cx="260" cy="230" rx="120" ry="36" opacity="0.35" />
+  </g>
+
+  <g stroke="#4cc9f0" stroke-width="1.8" stroke-linecap="round" opacity="0.75">
+    <path d="M150 190 Q260 120 360 200" />
+    <path d="M160 320 Q260 400 360 320" />
+  </g>
+
+  <g fill="#f1f5ff">
+    <circle cx="180" cy="210" r="6" />
+    <circle cx="340" cy="200" r="7" fill="#4cc9f0" />
+    <circle cx="200" cy="330" r="5" fill="#f72585" />
+    <circle cx="340" cy="330" r="5" fill="#4cc9f0" />
+    <circle cx="260" cy="260" r="8" fill="#f8f9ff" />
+  </g>
+</svg>

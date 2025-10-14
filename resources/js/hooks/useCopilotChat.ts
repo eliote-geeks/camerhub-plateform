@@ -21,6 +21,9 @@ type UseCopilotChatReturn = {
 
 const useCopilotChat = ({ warmupMessage }: UseCopilotChatOptions = {}): UseCopilotChatReturn => {
     const webhookEndpoint = (import.meta.env.VITE_CHAT_WEBHOOK as string | undefined)?.trim() || '/contact/chat';
+    const csrfToken = typeof document !== 'undefined'
+        ? document.querySelector("meta[name='csrf-token']")?.getAttribute('content') ?? ''
+        : '';
     const [history, setHistory] = useState<ChatMessage[]>(() => (warmupMessage ? [warmupMessage] : []));
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -51,12 +54,22 @@ const useCopilotChat = ({ warmupMessage }: UseCopilotChatOptions = {}): UseCopil
                     .slice(-10)
                     .map((item) => ({ role: item.role, content: item.content }));
 
+                const isExternal = /^https?:\/\//i.test(webhookEndpoint) &&
+                    (typeof window === 'undefined' || !webhookEndpoint.startsWith(window.location.origin));
+
                 const response = await fetch(webhookEndpoint, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         Accept: 'application/json',
+                        ...(isExternal
+                            ? {}
+                            : {
+                                  'X-Requested-With': 'XMLHttpRequest',
+                                  ...(csrfToken ? { 'X-CSRF-TOKEN': csrfToken } : {}),
+                              }),
                     },
+                    credentials: isExternal ? 'omit' : 'include',
                     body: JSON.stringify({
                         message: content,
                         sessionId,

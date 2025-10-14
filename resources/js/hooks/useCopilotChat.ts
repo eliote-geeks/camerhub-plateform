@@ -20,6 +20,7 @@ type UseCopilotChatReturn = {
 };
 
 const useCopilotChat = ({ warmupMessage }: UseCopilotChatOptions = {}): UseCopilotChatReturn => {
+    const webhookEndpoint = (import.meta.env.VITE_CHAT_WEBHOOK as string | undefined)?.trim() || '/contact/chat';
     const [history, setHistory] = useState<ChatMessage[]>(() => (warmupMessage ? [warmupMessage] : []));
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -50,7 +51,7 @@ const useCopilotChat = ({ warmupMessage }: UseCopilotChatOptions = {}): UseCopil
                     .slice(-10)
                     .map((item) => ({ role: item.role, content: item.content }));
 
-                const response = await fetch('https://reveilart4arist.com/webhook/camerhub-chat', {
+                const response = await fetch(webhookEndpoint, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -65,15 +66,18 @@ const useCopilotChat = ({ warmupMessage }: UseCopilotChatOptions = {}): UseCopil
                 });
 
                 if (!response.ok) {
+                    if (response.status === 404 && webhookEndpoint !== '/contact/chat') {
+                        throw new Error('Webhook endpoint not found');
+                    }
                     throw new Error(`Webhook responded with status ${response.status}`);
                 }
 
-                const data = (await response.json()) as { response?: string };
+                const data = (await response.json()) as { response?: string; reply?: string };
 
                 const reply: ChatMessage = {
                     role: 'assistant',
                     content:
-                        data?.response ??
+                        data?.response ?? data?.reply ??
                         "Merci ! Je prépare une recommandation pour toi. Tu peux détailler davantage ton stack si besoin.",
                 };
 

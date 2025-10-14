@@ -68,6 +68,7 @@ jobs:
             **/.git*
             **/.github*
             **/node_modules/**
+            /.htaccess
             storage/logs/**
             storage/framework/cache/**
             storage/framework/sessions/**

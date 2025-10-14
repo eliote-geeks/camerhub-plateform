@@ -39,3 +39,4 @@
 ## Pending
 - `npm audit` still reports high severity issues due à `@inertiajs/progress` → requires upstream fix/alternative.
 - Initialize Git if needed (`git init`).
+- Déploiement GitHub Actions disponible (`.github/workflows/deploy.yml`). Renseigner les secrets `FTP_SERVER`, `FTP_PORT` (optionnel), `FTP_USERNAME`, `FTP_PASSWORD`, `FTP_PATH`. L’action build (`composer install`, `npm run build`) puis pousse les fichiers vers `htdocs/` via FTPS. Les commandes Artisan (`migrate`, caches) devront être exécutées manuellement depuis l’hébergement si nécessaire (pas d’accès SSH).

@@ -5,7 +5,12 @@
     "industry": "Retail / e-commerce",
     "metric": "95% de réponses automatisées",
     "description": "Détection d’intentions, relances automatiques et routage vers les bons conseillers pour réduire le temps de réponse à moins de 3 minutes.",
-    "stack": ["WhatsApp Cloud", "n8n", "OpenAI", "HubSpot"],
+    "stack": [
+      "WhatsApp Cloud",
+      "n8n",
+      "OpenAI",
+      "HubSpot"
+    ],
     "challenge": "Plusieurs marques partageaient la même équipe support, engorgeant WhatsApp et faisant exploser les délais de réponse.",
     "solution": [
       "Orchestration n8n des flux entrants avec reconnaissance d’intentions et classification marque",
@@ -24,12 +29,144 @@
     ]
   },
   {
+    "slug": "whatsapp-evolution-api-orchestration",
+    "title": "Orchestration Evolution API & marketing social",
+    "industry": "Agences marketing",
+    "metric": "Stack WhatsApp unifiée + campagnes automatisées",
+    "description": "Migration intégrale des APIs Evolution API en workflows n8n, intégration WhatsApp Business ou Baileys selon les besoins et automatisation des réseaux sociaux pour piloter le marketing d’agence.",
+    "stack": [
+      "Evolution API",
+      "WhatsApp Business API",
+      "WhatsApp Baileys",
+      "n8n",
+      "Meta",
+      "Instagram",
+      "X/Twitter"
+    ],
+    "challenge": "L’agence disposait de multiples connecteurs WhatsApp non homogènes et d’une gestion manuelle des campagnes sociales, générant des frictions pour ses clients.",
+    "solution": [
+      "Transformation des endpoints Evolution API existants en workflows orchestrés dans n8n",
+      "Déploiement d’un connecteur modulaire prenant en charge WhatsApp Business ou Baileys selon les cas d’usage",
+      "Automatisation des publications et reporting réseaux sociaux (Meta, Instagram, X) depuis un seul hub",
+      "Playbooks marketing multi-clients avec segmentation, nurturing et reporting temps réel"
+    ],
+    "results": [
+      "Gestion centralisée de toutes les variantes d’API WhatsApp",
+      "Campagnes sociales orchestrées en continu pour chaque client",
+      "Réduction de 60% du temps de mise en production des nouveaux flux",
+      "Vision marketing unifiée et tableaux de bord automatisés"
+    ],
+    "timeline": [
+      "Semaine 1 : audit Evolution API et cadrage besoins par client",
+      "Semaine 2 : refonte workflows WhatsApp + intégrations Baileys/Business",
+      "Semaine 3 : automatisations réseaux sociaux et reporting agence",
+      "Semaine 4 : formation équipes marketing et passage en prod"
+    ]
+  },
+  {
+    "slug": "chatbot-whatsapp-services-particuliers",
+    "title": "Chatbot WhatsApp ventes services",
+    "industry": "Services B2C",
+    "metric": "Vente automatisée 24/7",
+    "description": "Chatbot WhatsApp qui conseille, vend et réserve des services pour les particuliers – testable en direct au +237620205400.",
+    "stack": [
+      "WhatsApp Cloud",
+      "Evolution API",
+      "n8n",
+      "OpenAI",
+      "Stripe"
+    ],
+    "challenge": "Les demandes entrantes arrivaient par appels et messages épars, sans tunnel d’achat clair pour les particuliers.",
+    "solution": [
+      "Parcours conversationnel complet avec qualification, devis instantané et upsell",
+      "Catalogue dynamique connecté aux stocks et aux disponibilités agents",
+      "Paiement et prise de rendez-vous finalisés dans WhatsApp",
+      "Monitoring qualité avec alertes en cas de panier abandonné"
+    ],
+    "results": [
+      "Ventes automatisées en continu sans agent de garde",
+      "+35% de conversion sur les demandes spontanées",
+      "Données clients centralisées pour les campagnes de relance"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage offres et design conversationnel",
+      "Semaine 2 : build chatbot, connecteurs paiement et calendrier",
+      "Semaine 3 : tests utilisateurs, optimisations et lancement"
+    ]
+  },
+  {
+    "slug": "whatsapp-crm-pipeline",
+    "title": "Pipeline WhatsApp connecté au CRM",
+    "industry": "Services financiers",
+    "metric": "+45% de leads qualifiés",
+    "description": "Centralisation des conversations WhatsApp, scoring automatique et synchronisation temps réel avec le CRM interne.",
+    "stack": [
+      "WhatsApp Business API",
+      "Evolution API",
+      "n8n",
+      "HubSpot",
+      "Langfuse"
+    ],
+    "challenge": "Les équipes conseillers jonglaient entre WhatsApp et le CRM avec des doubles saisies et un suivi incomplet des prospects.",
+    "solution": [
+      "Capture automatique des conversations et pièces jointes",
+      "Enrichissement des fiches prospects via scoring IA",
+      "Déclenchement d’alertes lorsqu’un lead chaud n’obtient pas de réponse en 5 minutes",
+      "Reporting consolidé sur la performance des campagnes WhatsApp"
+    ],
+    "results": [
+      "+45% de leads qualifiés injectés dans le CRM",
+      "Temps de réponse moyen divisé par 2",
+      "Visibilité 360° des échanges sans double saisie"
+    ],
+    "timeline": [
+      "Semaine 1 : analyse CRM + mapping process",
+      "Semaine 2 : mise en place synchronisation n8n + règles IA",
+      "Semaine 3 : tests live, coaching équipes et go-live"
+    ]
+  },
+  {
+    "slug": "whatsapp-field-operations",
+    "title": "Workflows WhatsApp terrain & interventions",
+    "industry": "Maintenance & services terrain",
+    "metric": "Interventions clôturées +30%",
+    "description": "Automatisation des ordres de mission, reporting photos et signature client directement dans WhatsApp.",
+    "stack": [
+      "WhatsApp Cloud",
+      "Baileys",
+      "n8n",
+      "Supabase",
+      "Notion"
+    ],
+    "challenge": "Les techniciens terrain devaient remplir des formulaires papier puis ressaisir les rapports, retardant facturation et suivi qualité.",
+    "solution": [
+      "Assignation automatique des missions et rappel WhatsApp",
+      "Checklists dynamiques avec capture photo/vidéo",
+      "Validation client via signature digitale et envoi instantané au back-office",
+      "Tableaux de bord temps réel sur les incidents et SLA"
+    ],
+    "results": [
+      "+30% de dossiers clôturés dans la journée",
+      "Temps de facturation réduit de 48h",
+      "Traçabilité complète des interventions terrain"
+    ],
+    "timeline": [
+      "Semaine 1 : cadrage terrain et conception parcours",
+      "Semaine 2 : développement des workflows WhatsApp + stockage",
+      "Semaine 3 : pilote terrain, ajustements et déploiement"
+    ]
+  },
+  {
     "slug": "nurturing-ventes-scoring",
     "title": "Nurturing ventes & scoring leads",
     "industry": "SaaS B2B",
     "metric": "x3 sur le taux de conversion",
     "description": "Segmentation dynamique, scoring IA et relances multicanales orchestrées dans n8n.",
-    "stack": ["n8n", "Zoho CRM", "Langfuse"],
+    "stack": [
+      "n8n",
+      "Zoho CRM",
+      "Langfuse"
+    ],
     "challenge": "Les commerciaux perdaient du temps sur des leads froids faute de scoring fiable et d’informations consolidées.",
     "solution": [
       "Collecte automatique des signaux d’usage produit et interactions marketing",
@@ -53,7 +190,12 @@
     "industry": "Opérations logistiques",
     "metric": "-40% de charge opérationnelle",
     "description": "Synthèse quotidienne, génération de rapports et recommandations d’actions prioritaires basées sur vos KPIs.",
-    "stack": ["Notion", "Supabase", "OpenAI", "Metabase"],
+    "stack": [
+      "Notion",
+      "Supabase",
+      "OpenAI",
+      "Metabase"
+    ],
     "challenge": "Les managers passaient leurs matinées à consolider les incidents et KPI dispersés dans plusieurs outils.",
     "solution": [
       "Centralisation des événements opérationnels dans Supabase",
@@ -77,7 +219,12 @@
     "industry": "EdTech",
     "metric": "-65% de backlog support",
     "description": "Chatbot web + email qui traite 4 langues, escalade aux bons experts et génère des synthèses SLA automatiques.",
-    "stack": ["Next.js", "n8n", "Anthropic", "Zendesk"],
+    "stack": [
+      "Next.js",
+      "n8n",
+      "Anthropic",
+      "Zendesk"
+    ],
     "challenge": "L’équipe support recevait des dizaines de questions récurrentes en plusieurs langues, hors horaires, avec un backlog croissant.",
     "solution": [
       "Chatbot web intégré à la documentation dynamique",
@@ -101,7 +248,12 @@
     "industry": "Finance / PME",
     "metric": "2h gagnées / jour",
     "description": "Automatisation de la collecte comptable, génération de dashboards KPIs et alerting en cas d’écarts critiques.",
-    "stack": ["Airtable", "Temporal", "DuckDB", "Metabase"],
+    "stack": [
+      "Airtable",
+      "Temporal",
+      "DuckDB",
+      "Metabase"
+    ],
     "challenge": "Le DAF passait trop de temps à consolider les écritures et vérifier les écarts avant chaque comité.",
     "solution": [
       "Pipelines automatisés pour nettoyer et agréger les écritures",
@@ -125,7 +277,12 @@
     "industry": "Scale-up",
     "metric": "92% de satisfaction onboarding",
     "description": "Agent IA qui guide les nouvelles recrues, découpe les tâches et notifie les managers en cas de blocage.",
-    "stack": ["Slack", "n8n", "OpenAI", "Notion"],
+    "stack": [
+      "Slack",
+      "n8n",
+      "OpenAI",
+      "Notion"
+    ],
     "challenge": "Les nouveaux arrivants avaient une expérience fragmentée avec des checklists dispersées et peu de feedback managers.",
     "solution": [
       "Assistant Slack qui orchestre le parcours onboarding",
@@ -149,7 +306,13 @@
     "industry": "Marketing digital",
     "metric": "+48% de ROI campagnes",
     "description": "Copilote marketing qui priorise les audiences, ajuste les budgets et génère des variantes créatives.",
-    "stack": ["Google Ads", "Meta", "n8n", "OpenAI", "Looker Studio"],
+    "stack": [
+      "Google Ads",
+      "Meta",
+      "n8n",
+      "OpenAI",
+      "Looker Studio"
+    ],
     "challenge": "L’équipe growth jonglait avec plusieurs plateformes et perdait du temps à analyser les performances quotidiennement.",
     "solution": [
       "Collecte consolidée des spend/perf sur toutes les plateformes",
@@ -173,7 +336,13 @@
     "industry": "Industrie",
     "metric": "-30% de temps d’arrêt",
     "description": "Assistant mobile pour techniciens qui diagnostique, propose les pièces et sauvegarde les interventions.",
-    "stack": ["Flutter", "n8n", "Supabase", "OpenAI", "PowerBI"],
+    "stack": [
+      "Flutter",
+      "n8n",
+      "Supabase",
+      "OpenAI",
+      "PowerBI"
+    ],
     "challenge": "Les interventions terrain manquaient de standardisation et la remontée d’information était lente.",
     "solution": [
       "Checklist dynamique générée selon l’équipement",
@@ -197,7 +366,12 @@
     "industry": "Legal / Assurance",
     "metric": "+75% de dossiers traités",
     "description": "IA qui contrôle les pièces, détecte les anomalies et prépare les rapports de conformité.",
-    "stack": ["Langchain", "n8n", "Azure Form Recognizer", "Notion"],
+    "stack": [
+      "Langchain",
+      "n8n",
+      "Azure Form Recognizer",
+      "Notion"
+    ],
     "challenge": "La revue manuelle des dossiers rallongeait les délais et laissait passer des incohérences.",
     "solution": [
       "Extraction automatique des champs critiques",
@@ -221,7 +395,13 @@
     "industry": "Services professionnels",
     "metric": "90% de réponses instantanées",
     "description": "Assistant interne qui répond aux consultants, référence les documents et escalade vers les experts.",
-    "stack": ["ElasticSearch", "n8n", "OpenAI", "Notion", "Slack"],
+    "stack": [
+      "ElasticSearch",
+      "n8n",
+      "OpenAI",
+      "Notion",
+      "Slack"
+    ],
     "challenge": "Les équipes passaient trop de temps à retrouver les bonnes slides ou procédures.",
     "solution": [
       "Indexation automatique des documents et mises à jour",

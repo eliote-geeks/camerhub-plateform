@@ -232,6 +232,50 @@ export const contactBadges: ContactBadge[] = [
     },
 ];
 
+
+export const commerceIdeaSegments = [
+    {
+        segment: 'Petits commerces',
+        ideas: [
+            {
+                title: 'Click & Collect WhatsApp',
+                description: 'Tunnel de commande instantané, paiement et retrait en boutique via chatbot WhatsApp.',
+                impact: '+25% de ventes additionnelles sur les horaires creux',
+            },
+            {
+                title: 'Campagnes locales automatisées',
+                description: 'Diffusion automatique des promos, stocks flash et relances SMS/WhatsApp selon la météo et les ventes.',
+                impact: 'Visites en boutique x1.5 pendant les périodes clés',
+            },
+            {
+                title: 'Fidélisation intelligente',
+                description: 'Programme de points et rappels personnalisés connecté au POS et aux habitudes d’achat.',
+                impact: '+30% de réachats dans les 60 jours',
+            },
+        ],
+    },
+    {
+        segment: 'Grandes enseignes & marketplaces',
+        ideas: [
+            {
+                title: 'Copilote merchandising',
+                description: 'Recommandations IA pour adapter l’assortiment par magasin et pousser des bundles dynamiques.',
+                impact: '+18% de panier moyen sur les lignes impactées',
+            },
+            {
+                title: 'Service client social media',
+                description: 'Automatisation du tri, priorisation et réponse des messages Meta/Instagram/X.',
+                impact: 'Backlog social divisé par 3 et SLA maintenu',
+            },
+            {
+                title: 'Pilotage growth omnicanal',
+                description: 'Analyse cross-canal, budget pacing et génération de créas IA orchestrées depuis n8n.',
+                impact: '+35% de ROI marketing en 8 semaines',
+            },
+        ],
+    },
+] as const;
+
 export const revealDelays = ['reveal-delay-200', 'reveal-delay-400', 'reveal-delay-600'] as const;
 
 export const checklistIcon = Check;

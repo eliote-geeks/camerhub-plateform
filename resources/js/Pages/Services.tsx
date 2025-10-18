@@ -6,6 +6,7 @@ import {
     differentiators,
     integrationStack,
     operationsPerks,
+    commerceIdeaSegments,
     revealDelays,
     serviceFaq,
     servicePackages,
@@ -140,6 +141,37 @@ const Services = () => {
                             >
                                 Lancer ce pack
                             </a>
+                        </ScrollReveal>
+                    ))}
+                </div>
+            </ScrollReveal>
+
+            <ScrollReveal as="section" className="mt-20 space-y-8">
+                <div className="space-y-4 text-center lg:text-left">
+                    <p className="text-sm uppercase tracking-[0.35em] text-white/60">Idées commerce</p>
+                    <h2 className="text-3xl font-semibold">Des cas immédiats pour petits et grands commerces</h2>
+                    <p className="text-white/70">Choisis un projet clé en main : nous adaptons les workflows aux volumes, aux canaux et aux équipes en place.</p>
+                </div>
+                <div className="grid gap-6 lg:grid-cols-2">
+                    {commerceIdeaSegments.map((segment, index) => (
+                        <ScrollReveal
+                            key={segment.segment}
+                            className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-7"
+                            delayClassName={revealDelays[index % revealDelays.length]}
+                        >
+                            <div>
+                                <p className="text-xs uppercase tracking-[0.35em] text-white/50">{segment.segment}</p>
+                                <h3 className="mt-3 text-xl font-semibold text-white">Projets prêts à lancer</h3>
+                            </div>
+                            <ul className="mt-5 flex flex-1 flex-col gap-4 text-sm text-white/70">
+                                {segment.ideas.map((idea) => (
+                                    <li key={idea.title} className="rounded-2xl border border-white/10 bg-[#050b1d]/70 p-4">
+                                        <p className="text-base font-semibold text-white">{idea.title}</p>
+                                        <p className="mt-2">{idea.description}</p>
+                                        <p className="mt-3 text-xs uppercase tracking-[0.25em] text-[#4cc9f0]">{idea.impact}</p>
+                                    </li>
+                                ))}
+                            </ul>
                         </ScrollReveal>
                     ))}
                 </div>
